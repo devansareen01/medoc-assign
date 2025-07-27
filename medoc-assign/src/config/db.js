@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://localhost:27017/medoc';
-
+console.log(MONGO_URI)
 const connectDB = async () => {
   try {
     await mongoose.connect(MONGO_URI);
