@@ -2,14 +2,12 @@ const swaggerJSDoc = require('swagger-jsdoc');
 
 const swaggerDefinition = {
   openapi: '3.0.0', 
+  schemes: ['http'],
   info: {
     title: 'Medoc Assignment API', 
     version: '1.0.0', 
     description: 'API documentation for the Medoc Patient & Diagnostic Test Management System.', 
-    contact: {
-      name: 'Your Name/Team',
-      email: 'your.email@example.com',
-    },
+ 
   },
   servers: [
     {
