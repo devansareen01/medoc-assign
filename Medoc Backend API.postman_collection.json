@@ -1,0 +1,1433 @@
+{
+	"info": {
+		"_postman_id": "b458538a-56e5-409a-b914-9e7ce3f81816",
+		"name": "Medoc Backend API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "43557660"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/register",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-1P0r4B+RMBoS3w4kj+hfAT0IcVg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:03:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6880a551113dfcc71e2561e8\",\n    \"username\": \"doctor1\",\n    \"role\": \"doctor\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n//   \"username\": \"doctor1\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "162"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a2-1WtzjFOBEeGFRT2bq+fD8khtGFE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:04:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"username\",\n            \"location\": \"body\"\n        },\n        {\n            \"type\": \"field\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"username\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Register",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"password123\",\n  \"role\": \"doctor\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/register",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.18.0 (Ubuntu)"
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 27 Jul 2025 06:09:57 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=31536000; includeSubDomains"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Vary",
+									"value": "Origin"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "RateLimit-Policy",
+									"value": "5;w=900"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "5"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "4"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "900"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-OJzKHUExAU190GWsY7FeqJ+MVpg\""
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"6885c2b45e636c1fa008f5c2\",\n    \"username\": \"doctor1\",\n    \"role\": \"doctor\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json();",
+									"pm.environment.set('accessToken', data.accessToken);",
+									"pm.environment.set('userId', data.user.id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"password123\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/login",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"password123\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODBhNTUxMTEzZGZjYzcxZTI1NjFlOCIsImlhdCI6MTc1MzI2MTU4NywiZXhwIjoxNzUzODY2Mzg3fQ.w-QgRjON7Yv40OlIy2PTi7rAKGDM_qYqNDErXR4LI8U; Max-Age=604800; Path=/api/auth/refresh-token; Expires=Wed, 30 Jul 2025 09:06:27 GMT; HttpOnly; SameSite=Strict"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "288"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"120-0dO8I5IcNDhTJs7hakF7RChL8YA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:06:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODBhNTUxMTEzZGZjYzcxZTI1NjFlOCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NTMyNjE1ODcsImV4cCI6MTc1MzI2MjQ4N30.8sTl1Lky8Vl3zFn4xQ5tiELnYeYzaR7Z61gmPbKzueo\",\n    \"user\": {\n        \"id\": \"6880a551113dfcc71e2561e8\",\n        \"username\": \"doctor1\",\n        \"role\": \"doctor\"\n    }\n}"
+						},
+						{
+							"name": "Login",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"doctor1\",\n  \"password\": \"passwor123\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/login",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "33"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"21-dBEoW0UmTF+EGUMaprEp9/8zNNA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:22:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid credentials\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Refresh Token",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json();\r",
+									"pm.environment.set('accessToken', data.accessToken);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/refresh-token",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"refresh-token"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/refresh-token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"refresh-token"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-vFH8o+3GCEZRapNjQkCw5IIg1c0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:24:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODBhNTUxMTEzZGZjYzcxZTI1NjFlOCIsInJvbGUiOiJkb2N0b3IiLCJpYXQiOjE3NTMyNjI2NTksImV4cCI6MTc1MzI2MzU1OX0.WulXdwC--ZZlD_hx4SasAyG9Vhrdx4SsI9lSQ06KQj4\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/auth/refresh-token",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"refresh-token"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-nlaKcruKlmdUZgUSDGod5i7MCfg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:24:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"No refresh token provided\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/logout",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Add Patient",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"gender\": \"Male\",\n  \"contact\": \"1234567890\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/patients",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patients"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Unauthorized",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"gender\": \"Male\",\n  \"contact\": \"1234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/patients",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-TdeScqFQy+dbnhB6tfnSArDhevg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:26:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"error\": \"No token provided\"\n}"
+						},
+						{
+							"name": "Bad Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"gender\": \"Male\",\n  \"contact\": \"1234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/patients",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "100"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"64-UrfqCPnUYGrQ37b+yTZWE6n7LqY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:27:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"Male\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"gender\",\n            \"location\": \"body\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"John Doe\",\n  \"age\": 30,\n  \"gender\": \"Male\",\n  \"contact\": \"1234567890\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/patients",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patients"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "186"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-Xn5vO50INnt0s93B9JCFsCQNd1g\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:29:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"John Doe\",\n    \"age\": 30,\n    \"gender\": \"Male\",\n    \"contact\": \"1234567890\",\n    \"_id\": \"6880ab5caaedd8bf9d82437d\",\n    \"createdAt\": \"2025-07-23T09:29:00.752Z\",\n    \"updatedAt\": \"2025-07-23T09:29:00.752Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Patient Reports",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json();",
+									"if (data.length > 0) pm.environment.set('reportId', data[0]._id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/patients/{{patientId}}/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"patients",
+								"{{patientId}}",
+								"reports"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "invalid mongoid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/patients/{{patientId}}/reports",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"patients",
+										"{{patientId}}",
+										"reports"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "117"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"75-pFnlYmHmHUho0ybOIHjce21DfdY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:29:58 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"errors\": [\n        {\n            \"type\": \"field\",\n            \"value\": \"6880ab5caaed8bf9d82437d\",\n            \"msg\": \"Invalid value\",\n            \"path\": \"id\",\n            \"location\": \"params\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Diagnostic Tests",
+			"item": [
+				{
+					"name": "Add Diagnostic Test",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"MRI\",\n  \"description\": \"Complete MRI \",\n  \"cost\": 500\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/diagnostic-tests",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"diagnostic-tests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Add Diagnostic Test",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"name\": \"MRI\",\n  \"description\": \"Complete MRI \",\n  \"cost\": 500\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/diagnostic-tests",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"diagnostic-tests"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-2GQRsEFJBChN6o8aWr6kWEJjfEg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:31:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date"
+								}
+							],
+							"body": "{\n    \"name\": \"CBC\",\n    \"description\": \"Complete Blood Count\",\n    \"cost\": 500,\n    \"_id\": \"6880abf7aaedd8bf9d824381\",\n    \"createdAt\": \"2025-07-23T09:31:35.262Z\",\n    \"updatedAt\": \"2025-07-23T09:31:35.262Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "List Diagnostic Tests",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var data = pm.response.json();",
+									"if (data.length > 0) pm.environment.set('testId', data[0]._id);"
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/diagnostic-tests",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"diagnostic-tests"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Diagnostic Tests",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/diagnostic-tests",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"diagnostic-tests"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "357"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"165-9N+VpVQ68BCnC534XNOGwTWiXRQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:32:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"6880abf7aaedd8bf9d824381\",\n        \"name\": \"CBC\",\n        \"description\": \"Complete Blood Count\",\n        \"cost\": 500,\n        \"createdAt\": \"2025-07-23T09:31:35.262Z\",\n        \"updatedAt\": \"2025-07-23T09:31:35.262Z\",\n        \"__v\": 0\n    },\n    {\n        \"_id\": \"6880ac0eaaedd8bf9d824383\",\n        \"name\": \"MRI\",\n        \"description\": \"Complete MRI\",\n        \"cost\": 500,\n        \"createdAt\": \"2025-07-23T09:31:58.694Z\",\n        \"updatedAt\": \"2025-07-23T09:31:58.694Z\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Reports",
+			"item": [
+				{
+					"name": "Assign Test to Patient (Create Report)",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"patientId\": \"{{patientId}}\",\n  \"testId\": \"{{testId}}\",\n  \"reportData\": {\n    \"result\": \"Normal\",\n    \"remarks\": \"All values within range\",\n    \"testedAt\": \"2024-06-01T10:00:00.000Z\"\n  }\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/api/reports",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"reports"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Assign Test to Patient (Create Report)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"patientId\": \"{{patientId}}\",\n  \"testId\": \"{{testId}}\",\n  \"reportData\": {\n    \"result\": \"Normal\",\n    \"remarks\": \"All values within range\",\n    \"testedAt\": \"2024-06-01T10:00:00.000Z\"\n  }\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/api/reports",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"reports"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e-fnIRfKSklo6upb79Q3kVclpDDEw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:35:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"patientId\": \"6880ab5caaedd8bf9d82437d\",\n    \"testId\": \"6880abf7aaedd8bf9d824381\",\n    \"reportData\": {\n        \"result\": \"Normal\",\n        \"remarks\": \"All values within range\",\n        \"testedAt\": \"2024-06-01T10:00:00.000Z\"\n    },\n    \"_id\": \"6880acdbcb690e439785be8d\",\n    \"createdAt\": \"2025-07-23T09:35:23.836Z\",\n    \"updatedAt\": \"2025-07-23T09:35:23.836Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Report by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/reports/{{reportId}}",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"{{reportId}}"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Report by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer {{accessToken}}"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/api/reports/{{reportId}}",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"api",
+										"reports",
+										"{{reportId}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "617"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"269-QpX5D203U0p88Ijo1YsSy/SoxCQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 23 Jul 2025 09:36:00 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"reportData\": {\n        \"result\": \"Normal\",\n        \"remarks\": \"All values within range\",\n        \"testedAt\": \"2024-06-01T10:00:00.000Z\"\n    },\n    \"_id\": \"6880acdbcb690e439785be8d\",\n    \"patientId\": {\n        \"_id\": \"6880ab5caaedd8bf9d82437d\",\n        \"name\": \"John Doe\",\n        \"age\": 30,\n        \"gender\": \"Male\",\n        \"contact\": \"1234567890\",\n        \"createdAt\": \"2025-07-23T09:29:00.752Z\",\n        \"updatedAt\": \"2025-07-23T09:29:00.752Z\",\n        \"__v\": 0\n    },\n    \"testId\": {\n        \"_id\": \"6880abf7aaedd8bf9d824381\",\n        \"name\": \"CBC\",\n        \"description\": \"Complete Blood Count\",\n        \"cost\": 500,\n        \"createdAt\": \"2025-07-23T09:31:35.262Z\",\n        \"updatedAt\": \"2025-07-23T09:31:35.262Z\",\n        \"__v\": 0\n    },\n    \"createdAt\": \"2025-07-23T09:35:23.836Z\",\n    \"updatedAt\": \"2025-07-23T09:35:23.836Z\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Download Report PDF",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{accessToken}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/reports/{{reportId}}/pdf",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"reports",
+								"{{reportId}}",
+								"pdf"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseUrl",
+			"value": "http://20.248.208.172:8001"
+		},
+		{
+			"key": "accessToken",
+			"value": ""
+		},
+		{
+			"key": "userId",
+			"value": ""
+		},
+		{
+			"key": "patientId",
+			"value": ""
+		},
+		{
+			"key": "testId",
+			"value": ""
+		},
+		{
+			"key": "reportId",
+			"value": ""
+		}
+	]
+}
