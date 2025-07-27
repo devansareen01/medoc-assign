@@ -249,7 +249,7 @@
 								},
 								{
 									"key": "Set-Cookie",
-									"value": "refreshToken=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY4ODBhNTUxMTEzZGZjYzcxZTI1NjFlOCIsImlhdCI6MTc1MzI2MTU4NywiZXhwIjoxNzUzODY2Mzg3fQ.w-QgRjON7Yv40OlIy2PTi7rAKGDM_qYqNDErXR4LI8U; Max-Age=604800; Path=/api/auth/refresh-token; Expires=Wed, 30 Jul 2025 09:06:27 GMT; HttpOnly; SameSite=Strict"
+									"value": ""
 								},
 								{
 									"key": "Content-Type",

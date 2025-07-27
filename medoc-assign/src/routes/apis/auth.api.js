@@ -115,7 +115,7 @@ router.post(
       await user.save();
     }
     res.cookie('refreshToken', refreshToken, {
-      httpOnly: false,
+      httpOnly: true,
       secure: false,
       sameSite: 'strict',
       path: '/api/auth/refresh-token',
