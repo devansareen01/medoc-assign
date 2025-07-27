@@ -22,7 +22,7 @@ app.use(cookieParser());
 app.use(helmet());
 
 app.use(cors({
-  origin: 'http://20.248.208.172:8000', 
+  origin: 'http://20.248.208.172:8000 http://20.248.208.172:8001 , ', 
   credentials: true
 }));  
 
