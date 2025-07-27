@@ -38,9 +38,9 @@ const swaggerDefinition = {
         properties: {
           name: { type: 'string', example: 'Blood Test' },
           description: { type: 'string', example: 'Full blood count, blood group' },
-          price: { type: 'number', example: 1500 },
+          cost: { type: 'number', example: 1500 },
         },
-        required: ['name', 'price'],
+        required: ['name', 'cost'],
       },
       PatientReport: {
         type: 'object',
@@ -63,24 +63,31 @@ const swaggerDefinition = {
         type: 'object',
         properties: {
           username: { type: 'string', example: 'testuser' },
-          email: { type: 'string', format: 'email', example: 'test@example.com' },
           password: { type: 'string', format: 'password', example: 'password123' },
+          role: { type: 'string', enum: ['doctor', 'lab_assistant'], example: 'doctor' },
         },
-        required: ['username', 'email', 'password'],
+        required: ['username', 'password', 'role'],
       },
       LoginRequest: {
         type: 'object',
         properties: {
-          email: { type: 'string', format: 'email', example: 'test@example.com' },
+          username: { type: 'string', example: 'testuser' },
           password: { type: 'string', format: 'password', example: 'password123' },
         },
-        required: ['email', 'password'],
+        required: ['username', 'password'],
       },
       AuthResponse: {
         type: 'object',
         properties: {
-          success: { type: 'boolean', example: true },
-          token: { type: 'string', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' },
+          accessToken: { type: 'string', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' },
+          user: {
+            type: 'object',
+            properties: {
+              id: { type: 'string', example: '60c72b2f9b1d8e001c8a4f2b' },
+              username: { type: 'string', example: 'testuser' },
+              role: { type: 'string', example: 'doctor' },
+            },
+          },
         },
       },
       Error: {
@@ -108,13 +115,24 @@ const swaggerDefinition = {
 
 const options = {
   swaggerDefinition,
- 
   apis: [
     './src/routes/apis/*.js', 
     './src/model/schema/*.js' 
   ],
 };
 
-const swaggerSpec = swaggerJSDoc(options);
+let swaggerSpec;
+try {
+  swaggerSpec = swaggerJSDoc(options);
+  console.log('Swagger spec generated successfully');
+  console.log('Number of paths found:', Object.keys(swaggerSpec.paths || {}).length);
+} catch (error) {
+  console.error('Error generating Swagger spec:', error);
+  // Create a minimal spec if generation fails
+  swaggerSpec = {
+    ...swaggerDefinition,
+    paths: {}
+  };
+}
 
 module.exports = swaggerSpec;

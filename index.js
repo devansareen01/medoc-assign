@@ -41,7 +41,5 @@ connectDB();
 
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
-    console.log(`Local Swagger docs available at http://localhost:${PORT}/api-docs`);
-    console.log(`Azure Server: http://20.248.208.172:8001`);
-    console.log(`Azure Swagger docs available at http://20.248.208.172:8001/api-docs`);
+
 });
