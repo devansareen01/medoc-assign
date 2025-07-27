@@ -27,15 +27,7 @@ function handleValidationErrors(req, res, next) {
 }
 
 
-const authLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, 
-  max: 5, 
-  message: {
-    error: 'Too many attempts, please try again later.'
-  },
-  standardHeaders: true,
-  legacyHeaders: false, 
-});
+
 
 /**
  * @swagger
@@ -69,7 +61,6 @@ const authLimiter = rateLimit({
  */
 router.post(
   '/register',
-  authLimiter,
   validateUserRegister,
   handleValidationErrors,
   asyncHandler(async (req, res) => {
@@ -109,7 +100,6 @@ router.post(
  */
 router.post(
   '/login',
-  authLimiter,
   validateUserLogin,
   handleValidationErrors,
   asyncHandler(async (req, res) => {
@@ -125,8 +115,8 @@ router.post(
       await user.save();
     }
     res.cookie('refreshToken', refreshToken, {
-      httpOnly: true,
-      secure: process.env.NODE_ENV === 'production',
+      httpOnly: false,
+      secure: false,
       sameSite: 'strict',
       path: '/api/auth/refresh-token',
       maxAge: 7 * 24 * 60 * 60 * 1000
