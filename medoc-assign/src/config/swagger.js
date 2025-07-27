@@ -2,6 +2,7 @@ const swaggerJSDoc = require('swagger-jsdoc');
 
 const swaggerDefinition = {
   openapi: '3.0.0', 
+  schemes: ['http'],
   info: {
     title: 'Medoc Assignment API', 
     version: '1.0.0', 
@@ -13,10 +14,13 @@ const swaggerDefinition = {
   },
   servers: [
     {
+      url: `http://20.248.208.172:8001/api`, 
+      description: 'Azure Production Server',
+    },
+    {
       url: `http://localhost:${process.env.PORT || 3000}/api`, 
       description: 'Local development server',
     },
-    
   ],
   components: {
     schemas: {
@@ -35,9 +39,9 @@ const swaggerDefinition = {
         properties: {
           name: { type: 'string', example: 'Blood Test' },
           description: { type: 'string', example: 'Full blood count, blood group' },
-          price: { type: 'number', example: 1500 },
+          cost: { type: 'number', example: 1500 },
         },
-        required: ['name', 'price'],
+        required: ['name', 'cost'],
       },
       PatientReport: {
         type: 'object',
@@ -60,24 +64,31 @@ const swaggerDefinition = {
         type: 'object',
         properties: {
           username: { type: 'string', example: 'testuser' },
-          email: { type: 'string', format: 'email', example: 'test@example.com' },
           password: { type: 'string', format: 'password', example: 'password123' },
+          role: { type: 'string', enum: ['doctor', 'lab_assistant'], example: 'doctor' },
         },
-        required: ['username', 'email', 'password'],
+        required: ['username', 'password', 'role'],
       },
       LoginRequest: {
         type: 'object',
         properties: {
-          email: { type: 'string', format: 'email', example: 'test@example.com' },
+          username: { type: 'string', example: 'testuser' },
           password: { type: 'string', format: 'password', example: 'password123' },
         },
-        required: ['email', 'password'],
+        required: ['username', 'password'],
       },
       AuthResponse: {
         type: 'object',
         properties: {
-          success: { type: 'boolean', example: true },
-          token: { type: 'string', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' },
+          accessToken: { type: 'string', example: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...' },
+          user: {
+            type: 'object',
+            properties: {
+              id: { type: 'string', example: '60c72b2f9b1d8e001c8a4f2b' },
+              username: { type: 'string', example: 'testuser' },
+              role: { type: 'string', example: 'doctor' },
+            },
+          },
         },
       },
       Error: {
