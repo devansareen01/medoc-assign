@@ -22,11 +22,13 @@ app.use(cookieParser());
 app.use(helmet());
 
 app.use(cors({
-    origin: (origin, callback) => {
-      callback(null, true);
-    },
-    credentials: true
-  }));
+  origin: 'http://20.248.208.172:8000', 
+  credentials: true
+}));  
+
+app.use(helmet({
+  crossOriginOpenerPolicy: { policy: 'same-origin' }, 
+}));
 
 app.use(morgan('dev'));
 
